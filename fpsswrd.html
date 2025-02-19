@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - Passionize</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FFE4E1; /* Blush Pink */
+        }
+
+        .forgot-password-container {
+            width: 400px;
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+        }
+
+        .forgot-password-container h2 {
+            color: #FF6F61;
+            margin-bottom: 10px;
+        }
+
+        .forgot-password-container p {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .forgot-password-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #FFDAB9;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .forgot-password-container button {
+            background-color: #FF6F61;
+            color: #FFFFFF;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            margin-top: 10px;
+            transition: all 0.3s;
+        }
+
+        .forgot-password-container button:hover {
+            background-color: #FF8675;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+        }
+
+        .forgot-password-container a {
+            color: #FF6F61;
+            text-decoration: none;
+            margin-top: 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="forgot-password-container">
+        <h2>Forgot Password?</h2>
+        <p>Enter your email and we will send you a reset link.</p>
+        <form action="#" method="post">
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Reset Password</button>
+        </form>
+        <a href="signin.html">Back to Sign In</a>
+    </div>
+</body>
+</html>
