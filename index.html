@@ -19,16 +19,17 @@
             height: 100vh;
             background: #FFDAB9; /* Peach Puff */
         }
-/* Logo (Top Right) */
-.logo {
-    position: absolute;
-    top: 10px;
-    right: 10px; /* Changed from left to right */
-    width: 65px; /* Smaller size */
-    height: auto;
-    filter: brightness(1.5); /* Increased brightness */
-    box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.8); /* Stronger glow */
-}
+
+        /* Logo (Top Right) */
+        .logo {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            width: 65px;
+            height: auto;
+            filter: brightness(1.5);
+            box-shadow: 3px 3px 6px rgba(255, 255, 255, 0.8);
+        }
 
         /* Left Section (Image Grid & Branding) */
         .left-section {
@@ -152,8 +153,7 @@
 </head>
 <body>
 
-    <!-- Logo in the top-left corner -->
-   <!-- Left Section (Image Grid & Branding) -->
+    <!-- Left Section (Image Grid & Branding) -->
     <div class="left-section">
         <div class="overlay">
             <div>Collab, Create & Grow</div>
@@ -179,16 +179,20 @@
     </div>
 
     <script>
-        document.getElementById("loginForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            const username = document.getElementById("username").value;
-            const password = document.getElementById("password").value;
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("loginForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevents default form submission behavior
 
-            if (username && password) {
-                window.location.href = "home.html";
-            } else {
-                alert("Please enter both username and password");
-            }
+                const username = document.getElementById("username").value;
+                const password = document.getElementById("password").value;
+
+                if (username && password) {
+                    console.log("Redirecting to home.html...");
+                    window.location.assign("home.html"); // Redirects to home page
+                } else {
+                    alert("Please enter both username and password");
+                }
+            });
         });
     </script>
 </body>
