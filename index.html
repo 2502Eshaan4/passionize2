@@ -4,12 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Passionize - Login</title>
+  <!-- Google Font (Optional) -->
   <link
     href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap"
     rel="stylesheet"
   />
   <style>
-    /* General Styles */
+    /* -----------------------------------------
+       GENERAL STYLES
+    ----------------------------------------- */
     * {
       margin: 0;
       padding: 0;
@@ -24,10 +27,13 @@
       position: relative;
     }
 
-    /* Left Section (Image Grid & Branding) */
+    /* -----------------------------------------
+       LEFT SECTION (IMAGE + OVERLAY)
+    ----------------------------------------- */
     .left-section {
       flex: 2;
       position: relative;
+      /* Update 'your-image-grid.jpg' to the actual image you want as a background */
       background: url('your-image-grid.jpg') center/cover no-repeat;
       display: flex;
       justify-content: center;
@@ -63,13 +69,15 @@
       border-radius: 10px;
     }
 
-    /* Right Section (Login Form) */
+    /* -----------------------------------------
+       RIGHT SECTION (LOGIN FORM)
+    ----------------------------------------- */
     .right-section {
       flex: 1;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #FFE4E1;
+      background: #FFE4E1; /* Blush Pink */
     }
 
     .login-container {
@@ -86,7 +94,7 @@
       width: 100%;
       max-width: 300px; /* Adjust as needed */
       margin-bottom: 20px;
-      filter: brightness(2); /* Make it bright if desired */
+      filter: brightness(2); /* Increase brightness if you like */
     }
 
     .login-container h2 {
@@ -155,21 +163,22 @@
 </head>
 <body>
 
-  <!-- Left Section (Image Grid & Branding) -->
+  <!-- LEFT SECTION -->
   <div class="left-section">
     <div class="overlay">
       <div>Collab, Create & Grow</div>
+      <!-- Update 'back.jpeg' to your actual image file if needed -->
       <img src="back.jpeg" alt="Artisan Work" />
     </div>
   </div>
 
-  <!-- Right Section (Login Form) -->
+  <!-- RIGHT SECTION (LOGIN FORM) -->
   <div class="right-section">
     <div class="login-container">
-      <!-- Screenshot placed above the login heading -->
+      <!-- The screenshot (Ss.png) placed above the login heading -->
       <img
         src="Ss.png"
-        alt="Ss"
+        alt="Screenshot or Logo"
         class="above-login"
       />
 
@@ -191,27 +200,33 @@
         />
         <button type="submit" class="login-btn">Login</button>
       </form>
+
+      <!-- Make sure the filename matches your "forgot password" page exactly -->
       <a href="fpsswrd.html" class="forgot-password">Forgot Password?</a>
+
       <div class="register-container">
         <span>Don't have an account?</span>
+        <!-- Make sure 'signin.html' is spelled exactly as your file name -->
         <a href="signin.html" class="register-link">Sign Up</a>
       </div>
     </div>
   </div>
 
+  <!-- SCRIPT: Form Submission -->
   <script>
     document.getElementById("loginForm").addEventListener("submit", function (event) {
       event.preventDefault();
       const username = document.getElementById("username").value;
       const password = document.getElementById("password").value;
 
+      // Basic check for non-empty fields
       if (username && password) {
+        // Redirect to 'realhome.html' upon success
         window.location.href = "realhome.html";
       } else {
-        alert("Please enter both username and password");
+        alert("Please enter both username and password.");
       }
     });
   </script>
 </body>
 </html>
-
