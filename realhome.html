@@ -17,6 +17,49 @@
       font-family: Arial, sans-serif;
       color: #333;
       background-color: #FFE4E1; /* Light blush background */
+      overflow-x: hidden; /* Hide any horizontal scroll from animations */
+    }
+
+    /* -----------------------------------------
+       ANIMATION KEYFRAMES
+    ----------------------------------------- */
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* -----------------------------------------
@@ -32,6 +75,8 @@
       padding: 15px 20px;
       z-index: 10;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      animation: slideInDown 1s forwards;
+      opacity: 0; /* Start hidden, fade in with slideInDown */
     }
     header h1 {
       color: #fff;
@@ -65,6 +110,9 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      opacity: 0; /* Start hidden */
+      animation: fadeInUp 1s 0.5s forwards; 
+      /* 0.5s delay so it starts after the header finishes */
     }
     .hero::before {
       content: "";
@@ -114,6 +162,9 @@
       background-color: #FFDAB9; /* Peach Puff */
       padding: 60px 20px;
       text-align: center;
+      opacity: 0; /* Start hidden */
+      animation: fadeInUp 1s 1.5s forwards; 
+      /* Delay so it starts after hero finishes */
     }
     .explore h2 {
       color: #FF6F61;
@@ -167,6 +218,9 @@
       background-color: #fff;
       padding: 60px 20px;
       text-align: center;
+      opacity: 0; /* Start hidden */
+      animation: fadeInUp 1s 2s forwards; 
+      /* Delay so it starts after explore */
     }
     .about h2 {
       color: #FF6F61;
@@ -188,6 +242,9 @@
       color: #fff;
       text-align: center;
       padding: 20px;
+      opacity: 0; /* Start hidden */
+      animation: fadeIn 1s 2.5s forwards;
+      /* Fades in after the About section */
     }
   </style>
 </head>
